@@ -1,0 +1,13 @@
+<%-include('./header') %>
+
+<!-- <%=user%> -->
+
+<h1>edit</h1>
+  <form action="../customers/<%=user.id%>" method="post">
+    <input type="text" name="name" value="<%=user.name%>"  placeholder="enter name">
+    <input type="number" name="mobile" value="<%=user.mobile%>" placeholder="enter mobile">
+    <input type="text" name="place" value="<%=user.place%>" placeholder="place">
+    <input type="submit" value="submit">
+  </form>
+
+<%-include('./footer') %>

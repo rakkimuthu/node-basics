@@ -1,0 +1,32 @@
+<%-include('./header') %>
+
+
+<div class="container">
+    <h1>view register user</h1>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>MObile</th>
+              <th>Place</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <%  firm.forEach(function(user){%>
+                   <td><%=user.name%></td>
+                   <td><%=user.mobile%></td>
+                   <td><%=user.place%></td>
+                   <td>
+                       <button><a href="../firms/<%=user.id%>">EDIT</a> </button>
+                       <button onclick="deletecustomer('<%=user.id%>')">Delete</button>
+                   </td>
+                </tr>
+                <%})%>
+          </tbody>
+        </table>
+      </div>
+
+<%-include('./footer') %>
